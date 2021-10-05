@@ -1,5 +1,5 @@
 my_list = ['в', '5', 'часов', '17', 'минут', 'температура',
-           'воздуха', 'была', '+5', 'градусов']
+           'воздуха', 'была', '-4', 'градусов']
 new_list = [ ]
 
 for i in my_list:
@@ -16,7 +16,7 @@ for i in my_list:
             i = "'" + i[0] + '0' + i[1] + "'"
             new_list.append(i)
         else:
-            new_list.append(i)
+            new_list.append("'" + i + "'")
     else:
         new_list.append(i)
 print(" ".join(new_list))

@@ -1,0 +1,34 @@
+<script>
+    'use strict';
+    function Post (author, text, date) {
+        this.author = author
+        this.text = text
+        this.date = date
+    }
+    Post.prototype.edit = function (text) {
+        this.text = this.text + text
+        alert(this.text)
+    }
+    let obj1 = new Post ('auth1', 'qwerty ', '20.11.2015')
+    let obj2 = new Post ('auth2', 'ytrewq ', '15.10.2020')
+    obj1.edit('new_txt')
+    obj2.edit('something')
+
+    function AttachedPost (author, text, date,highlighted){
+        Post.call(this,author, text, date)
+        this.highlighted = highlighted
+    }
+    AttachedPost.prototype = Object.create(Post.prototype)
+    AttachedPost.prototype.constructor = AttachedPost;
+    AttachedPost.prototype.makeTextHighlighted = function(){
+        this.highlighted = true
+        alert(this.highlighted)
+    }
+    let obj3 = new AttachedPost ('auth3', 'asdf', '12.12.12',false)
+    let obj4 = new AttachedPost ('auth4', 'aaaa', '12.12.12',false)
+    obj3.edit(' new_txt')
+    obj4.edit(' bbbbb')
+    obj3.makeTextHighlighted()
+    obj4.makeTextHighlighted()
+    
+</script>

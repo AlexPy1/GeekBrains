@@ -1,0 +1,36 @@
+<script>
+    'use strict';
+    class Post {
+        constructor (author,text, date){
+            this.author = author
+            this.text = text
+            this.date = date
+        }
+        edit(text) {
+            this.text = this.text + text
+            alert(this.text)
+        }
+    }
+    let obj1 = new Post ('auth1','asd','12.12.12')
+    let obj2 = new Post('auth2','qqqq', '22.10.19')
+    obj1.edit(' aaaaa')
+    obj2.edit(' 12345')
+
+    class AttachedPost extends Post {
+        constructor (author,text, date, highlighted) {
+            super(author, text, date)
+            this.highlighted = highlighted
+        }
+        
+        makeTextHighlighted() {
+            this.highlighted = true
+            alert(this.highlighted)
+        }
+    }
+    let obj3 = new AttachedPost ('auth3', 'asdf', '12.12.12',false)
+    let obj4 = new AttachedPost ('auth4', 'aaaa', '12.12.12',false)
+    obj3.edit(' new_txt')
+    obj4.edit(' bbbbb')
+    obj3.makeTextHighlighted()
+    obj4.makeTextHighlighted()
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict';
+        function mathOperation(a,b,operation) {
+        let res = 0
+        switch (operation) {
+
+            case ('сложение'):
+                res = a + b;
+                return res;
+            case ('вычитание'):
+                res = a - b;
+                return res;
+            case ('умножение'):
+                res = a * b;
+                return res;
+            case ('деление'):
+                res = a / b;
+                return res;
+        }
+        }
+     alert(mathOperation(5,3,'сложение'));
+     alert(mathOperation(6,3,'вычитание'));
+     alert(mathOperation(5,3,'умножение'));
+     alert(mathOperation(6,3,'деление'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

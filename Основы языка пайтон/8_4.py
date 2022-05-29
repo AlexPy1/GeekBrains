@@ -18,9 +18,12 @@ def val_checker(ch=0):
 def calc_cube(x):
    return x ** 3
 
-a = calc_cube(3)
-print(a)
-a = calc_cube(2)
-print(a)
-a = calc_cube(-6)
-print(a)
+try:
+    a = calc_cube(3)
+    print(a)
+    a = calc_cube(2)
+    print(a)
+    a = calc_cube(-6)
+    print(a)
+except ValueError:
+    print('Ошибка. Меньше нуля.')

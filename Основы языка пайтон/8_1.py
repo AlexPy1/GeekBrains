@@ -1,5 +1,5 @@
 import re
-email = 'sa_sha_gb@gmail.com'
+email = 'sa_sha_gbgmail.com'
 d = 'domain'
 u = 'username'
 def email_parse(email_address):
@@ -16,4 +16,8 @@ def email_parse(email_address):
         msg = 'wrong email:' + str(email)
         raise ValueError(msg)
 
-email_parse(email)
+try:
+    email_parse(email)
+except ValueError:
+    msg = 'wrong email:' + str(email)
+    print(msg)

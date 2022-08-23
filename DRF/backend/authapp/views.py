@@ -4,7 +4,7 @@ from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from .models import MyUser
 from .serializers import MyUserModelSerializer
 
-class MyUserModelViewSet(mixins.RetrieveModelMixin,
+class MyUserModelViewSet(mixins.RetrieveModelMixin, mixins.CreateModelMixin,
                    mixins.UpdateModelMixin,
                    mixins.ListModelMixin,
                    GenericViewSet):

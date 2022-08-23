@@ -10,7 +10,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from .serializers import ProjectModelSerializer, TODOModelSerializer
 
 class ProjectLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 10
+    default_limit = 100
 
 
 class ProjectModelViewSet(ModelViewSet):
@@ -26,7 +26,7 @@ class ProjectModelViewSet(ModelViewSet):
 
 
 class TODOLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 20
+    default_limit = 200
 
 
 class TODOModelViewSet(ModelViewSet):

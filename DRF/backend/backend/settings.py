@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'authapp',
+    'graphene_django',
     'corsheaders',
     'TODO',
     'rest_framework.authtoken'
@@ -104,9 +105,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
 
     ],
-    'DEFAULT_PERMISSION_CLASSES' : [
-        'rest_framework.permissions.DjangoModelPermissions',
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES' : [
+    #     'rest_framework.permissions.DjangoModelPermissions',
+    # ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.AcceptHeaderVersioning'
 }
 
@@ -127,6 +128,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'authapp.graphql.schema'
+}
 
 
 # Internationalization
